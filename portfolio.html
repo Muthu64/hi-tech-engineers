@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Portfolio | Hi-Tech Engineers</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#45464d",
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#131b2e",
+                        "on-primary-container": "#7c839b",
+                        "secondary": "#515f74",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#2f1500",
+                        "on-tertiary-container": "#c76c00",
+                        "safety-orange": "#FF8C00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .structural-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.1);
+        }
+        .blueprint-grid {
+            background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="flex justify-between items-center px-8 h-20">
+        <a href="index.html" class="text-2xl font-black tracking-tighter text-slate-900">HI-TECH ENGINEERS</a>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="index.html">Home</a>
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="index.html#services">Services</a>
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-bold text-safety-orange border-b-2 border-safety-orange pb-1" href="portfolio.html">Portfolio</a>
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="about.html">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="md:hidden material-symbols-outlined text-slate-900" onclick="document.getElementById('portfolio-mobile-menu').classList.toggle('hidden')">menu</button>
+            <button class="bg-safety-orange text-white px-6 py-2 font-['Space_Grotesk'] text-sm uppercase tracking-wider font-bold transition-transform active:scale-95" onclick="window.location.href='index.html#contact'">Get Quote</button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="portfolio-mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-8 py-4 space-y-3">
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="index.html" onclick="document.getElementById('portfolio-mobile-menu').classList.add('hidden')">Home</a>
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="index.html#services" onclick="document.getElementById('portfolio-mobile-menu').classList.add('hidden')">Services</a>
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-bold text-safety-orange" href="portfolio.html" onclick="document.getElementById('portfolio-mobile-menu').classList.add('hidden')">Portfolio</a>
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="about.html" onclick="document.getElementById('portfolio-mobile-menu').classList.add('hidden')">About</a>
+    </div>
+</nav>
+
+<main class="pt-20">
+    <!-- Hero Section -->
+    <header class="relative h-[614px] flex items-center justify-center overflow-hidden bg-slate-900">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale" alt="Modern skyscraper under construction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM7cvHsHI_71mA5B27KqaGH_p8jWsXjHhjAwVZktyjf3rNuewQFEjCY2e7puojqz24PDMEFgqKiFzx97AbQ-u7TBEQEIxQ72fPicAo_f5y8sl8SwmXcFhhvERJSgRa0-d_HkPWt-IpmPEgyQV-jacB0gl5LlqWWVkpDGbJb5-Xu7NgjhvGl63hZct4IDooL5ZvBRg6Z8zhGRn-VOgoy7jG3o92eEbw8oXpOdD6h94rLVDFKGI7cTOXFee8D6yHoa1X8Pq2D5cVGjg"/>
+        <div class="relative z-10 text-center px-4 max-w-4xl">
+            <span class="font-label-caps text-label-caps text-safety-orange bg-white/10 px-4 py-1 backdrop-blur-sm mb-6 inline-block">ENGINEERING EXCELLENCE</span>
+            <h1 class="font-h1 text-h1 text-white mb-6 uppercase">Portfolio of Excellence</h1>
+            <p class="font-body-lg text-body-lg text-slate-300">Precision-engineered residential spaces designed for contemporary urban lifestyle.</p>
+        </div>
+    </header>
+
+    <!-- Residential Revamps Section -->
+    <section class="py-24 px-8 max-w-7xl mx-auto border-b border-slate-100">
+        <div class="flex items-baseline gap-4 mb-12 border-l-4 border-safety-orange pl-6">
+            <h2 class="font-h2 text-h2 uppercase">Residential Revamps</h2>
+            <span class="text-slate-400 font-label-caps text-label-caps">CASE STUDIES 01-03</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Project 01 -->
+            <div class="group border border-slate-200 bg-white p-2">
+                <div class="relative grid grid-cols-2 gap-1 mb-6 h-80">
+                    <div class="relative overflow-hidden">
+                        <img alt="Original site before revamp" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI-kPdLeZaki8mDlKjO_H3FEKKy8Tdo2xQ5fGNUWQuckOV7vXdr7Ye73SxJt_CNKVNEt-UtCImxQrA5IlKBgqb6a6Vu6Ax-aDlH-FwCoPJlsKkqdO38o_Wj_xHZWCg91Zau4RALQrI0eOMvEiQtAdR6oiJe1Yp8w3KbCe3KMz6aR7_YLe1GLm0m7CGC6-44VdP1h0NQBJ6H1DlXv2NZ6piG_U-Egh2WGj6oN85AIVmbeWeV2DJBBQVrnrXADgiLftzlJLWv1fYeDw"/>
+                        <div class="absolute top-4 left-4 bg-black/80 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">Phase 01: Original</div>
+                    </div>
+                    <div class="relative overflow-hidden">
+                        <img alt="Completed revamp project" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugXdGbvA9l59wZnn7q5CsFF8xzUOPB9Pl-yIcZN6CrheiNbcXCVI_UlZ4b43ulKboorwWHQ37684LvDweN9_VFhTJIQRGC-ggvcex83455n_ug0lnWeONrja5xEhUlOiM1pseFTSWavqoKhoqn4_D5oukMjGqun52KUwALQLrp-tNU5rjD_RiBqpO8Bcy3-2MrBmbEGDNzVmX9F37lwhLqRbxSoX046JehdRWvQVmNsfZjVk5eAalulVqariXCXg-lgMXnHS7GOXQ"/>
+                        <div class="absolute top-4 left-4 bg-safety-orange text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">Phase 05: Completed</div>
+                    </div>
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-h3 text-h3 text-slate-900">PALLIKARANAI RESIDENCE</h3>
+                            <p class="text-slate-500 font-label-caps text-label-caps">CHENNAI, TN | 2023</p>
+                        </div>
+                        <span class="material-symbols-outlined text-safety-orange">home</span>
+                    </div>
+                    <p class="font-body-md text-slate-600 mb-6">Contemporary villa transformation focusing on sustainable materials and open-plan spatial optimization.</p>
+                    <div class="grid grid-cols-3 gap-2 border-t border-slate-100 pt-4">
+                        <div class="text-center">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Plot</span>
+                            <span class="block font-h3 text-slate-900">2400</span>
+                        </div>
+                        <div class="text-center border-x border-slate-100">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Status</span>
+                            <span class="block font-h3 text-slate-900">Done</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Timeline</span>
+                            <span class="block font-h3 text-slate-900">10mo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 02 -->
+            <div class="group border border-slate-200 bg-white p-2">
+                <div class="relative grid grid-cols-2 gap-1 mb-6 h-80">
+                    <div class="relative overflow-hidden">
+                        <img alt="Original apartment structure" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAldBLQA9UuJFjYIiKdZXFlEzoIAr2u5c4Hw_fJLO70Y6Pkr-V0B8ffoqE7SZZZ-iWLuPQdOAHnYPsYVI8vdoffPhlmT3q1VAYsyx48qqiTAv62s6M-QQvYa6GmLzHGEXZwE3gea8lEIBrWQlqACcSwSvI4uJKjdbITgCMGfGLLPhRXkj5_V8P2B7sXNubR7aQ7WHBD1rIrP56rOwryWKTupTasI7ElJ_grruIsGDIbvdftSiMPYw5TmI-hR1AZCR_HzfnhH6-0GXM"/>
+                        <div class="absolute top-4 left-4 bg-black/80 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">Phase 01: Original</div>
+                    </div>
+                    <div class="relative overflow-hidden">
+                        <img alt="Modern apartment after revamp" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj7zD4w85KnSzLp11QfFA7d78a9116uL5B1_5BKF5QhG3Gs1jyoWrFCi1N9PxkCayCBGcNz5YvuqQpBk6GLViUjH-SV0u6F4latsFuheN7r6wV3h503SJZ0U_rCP0K-uWfJKoHGxDDMlw-mImteGaMlB4gSy-EqogLv8J5Md2K0JqaMMhgxfoZuZ4AyAazxoQwRg8mQPQlTrqLS00cu3BDSbNzyrMJiH_yMbFrIcKFsrp2JLJHrX48QEISe_0lamS60d4WdUDU9Pg"/>
+                        <div class="absolute top-4 left-4 bg-safety-orange text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">Phase 05: Completed</div>
+                    </div>
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-h3 text-h3 text-slate-900">PUZHUTHIVAKKAM COMPLEX</h3>
+                            <p class="text-slate-500 font-label-caps text-label-caps">CHENNAI, TN | 2024</p>
+                        </div>
+                        <span class="material-symbols-outlined text-safety-orange">apartment</span>
+                    </div>
+                    <p class="font-body-md text-slate-600 mb-6">Multi-level residential development featuring modular structural components and high-efficiency ventilation.</p>
+                    <div class="grid grid-cols-3 gap-2 border-t border-slate-100 pt-4">
+                        <div class="text-center">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Levels</span>
+                            <span class="block font-h3 text-slate-900">G+3</span>
+                        </div>
+                        <div class="text-center border-x border-slate-100">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Units</span>
+                            <span class="block font-h3 text-slate-900">8</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Zone</span>
+                            <span class="block font-h3 text-slate-900">III</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 03 -->
+            <div class="group border border-slate-200 bg-white p-2">
+                <div class="relative grid grid-cols-2 gap-1 mb-6 h-80">
+                    <div class="relative overflow-hidden">
+                        <img alt="Original structure before renovation" class="w-full h-full object-cover grayscale" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop"/>
+                        <div class="absolute top-4 left-4 bg-black/80 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">Phase 01: Original</div>
+                    </div>
+                    <div class="relative overflow-hidden">
+                        <img alt="Modern structure after renovation" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=400&fit=crop&q=80"/>
+                        <div class="absolute top-4 left-4 bg-safety-orange text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">Phase 05: Completed</div>
+                    </div>
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-h3 text-h3 text-slate-900">RESIDENTIAL RENOVATION</h3>
+                            <p class="text-slate-500 font-label-caps text-label-caps">CHENNAI, TN | 2024</p>
+                        </div>
+                        <span class="material-symbols-outlined text-safety-orange">home_repair_service</span>
+                    </div>
+                    <p class="font-body-md text-slate-600 mb-6">Complete structural transformation with modern architectural upgrades and contemporary design elements.</p>
+                    <div class="grid grid-cols-3 gap-2 border-t border-slate-100 pt-4">
+                        <div class="text-center">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Plot</span>
+                            <span class="block font-h3 text-slate-900">3200</span>
+                        </div>
+                        <div class="text-center border-x border-slate-100">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Status</span>
+                            <span class="block font-h3 text-slate-900">Done</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Timeline</span>
+                            <span class="block font-h3 text-slate-900">12mo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chennai Developments Portfolio -->
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+        <div class="flex items-baseline gap-4 mb-12 border-l-4 border-safety-orange pl-6">
+            <h2 class="font-h2 text-h2 uppercase">Chennai Developments</h2>
+            <span class="text-slate-400 font-label-caps text-label-caps">PREMIUM RESIDENCES</span>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Maduravayal Project -->
+            <div class="border border-slate-200 bg-white p-2">
+                <div class="relative overflow-hidden h-64 mb-6">
+                    <img alt="Maduravayal villa project" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhGdif4YspLZbOu5Btx4G_Q7dlkB823K627PHjzgXc_oHLFR5oE0caN_C5-YVxphaZvYCAWtmhfeERWSdbkP5_j9089IgyTusf2xbLueDJoy6aeSYz7so8Tgxg4SKbOF0R_1Na-GgzcyMFF6GY3_-pXaj7o9NrTn9rkaVS15I9sAP8UWCtFlhsZHAt_HjZKq2X_LCZ9Z66gMkB6-ncvooe1cV64lD3oGyZYpFkqDaF8PLd1jT1YfBNitWLNaedDsMNiDgGZ5YDDsQ"/>
+                    <div class="absolute bottom-4 left-4 bg-safety-orange text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">Completed Project</div>
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-h3 text-h3 text-slate-900">MADURAVAYAL VILLA</h3>
+                        <span class="material-symbols-outlined text-safety-orange">domain</span>
+                    </div>
+                    <p class="text-slate-500 font-label-caps text-[10px] mb-4">MADURAVAYAL, CHENNAI</p>
+                    <p class="font-body-md text-slate-600 mb-6">Luxury residential build featuring custom stone cladding and integrated smart security systems.</p>
+                    <div class="flex items-center gap-4 border-t border-slate-100 pt-4">
+                        <div class="flex-1">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Status</span>
+                            <span class="block font-h3 text-slate-900 text-lg">DELIVERED</span>
+                        </div>
+                        <div class="flex-1 border-l border-slate-100 pl-4">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Style</span>
+                            <span class="block font-h3 text-slate-900 text-lg">MODERN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kolathur Project -->
+            <div class="border border-slate-200 bg-white p-2">
+                <div class="relative overflow-hidden h-64 mb-6">
+                    <img alt="Kolathur residence project" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujCG80OSOmXPagcRV1NzgaIPqwWpsI3GyEk908rszWAQNNZ1rt72aTyeBoY5UTcK5frOrFbAFcwAAXx6T4QPzThudlcVnYCT8OmZUpynHS5Qklk4nVeOZOZxQYyQXcgqmTetWq2e68IDbeyiEp8MxJBqVssp3hnjsodAxWcGBhetYPee7ueE5tKSw6cFS3nWZNJRpMDFaOZv4iLPnXNtUBgwCcXJ_uPGIfygGnQoK8azBFycAt2dceqCKUPHNfbA4tAVLoLM5GF"/>
+                    <div class="absolute bottom-4 left-4 bg-safety-orange text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">Completed Project</div>
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-h3 text-h3 text-slate-900">KOLATHUR RESIDENCE</h3>
+                        <span class="material-symbols-outlined text-safety-orange">location_city</span>
+                    </div>
+                    <p class="text-slate-500 font-label-caps text-[10px] mb-4">KOLATHUR, CHENNAI</p>
+                    <p class="font-body-md text-slate-600 mb-6">Optimized vertical living solution with focus on facade design and seismic structural stability.</p>
+                    <div class="flex items-center gap-4 border-t border-slate-100 pt-4">
+                        <div class="flex-1">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Area</span>
+                            <span class="block font-h3 text-slate-900 text-lg">3600 SFT</span>
+                        </div>
+                        <div class="flex-1 border-l border-slate-100 pl-4">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Rating</span>
+                            <span class="block font-h3 text-slate-900 text-lg">A+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- KK Nagar Project -->
+            <div class="border border-slate-200 bg-white p-2">
+                <div class="relative overflow-hidden h-64 mb-6">
+                    <img alt="KK Nagar apartments project" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugZlzkNagAPSQiCjpEDh65mFBNZk_YGsmaT14ftpVnyA27RGgnkNk0DjRWVIuiCkHO4qQET7e3Vo3Xql_Gl5riYaQ2mrnWuWKy6uoKNjDCOpsFDtNh1baB9ItsDopl6nmkExtl7da6VLYoCuo_mItubzpQ-HnRS7WGw5mvws6RNGhlrOg3EX5h5aCM3GYfByHrOJoyIRSORpZF_jSsafOdCDcv7vUjhIidp1CS7hnFbbphksfuysF-Zz7jDs0YlFF77HrUE-gbUFw"/>
+                    <div class="absolute bottom-4 left-4 bg-black text-white text-[10px] font-bold px-2 py-1 uppercase tracking-tighter">Featured Build</div>
+                </div>
+                <div class="p-4 border-t border-slate-100">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-h3 text-h3 text-slate-900">KK NAGAR APARTMENTS</h3>
+                        <span class="material-symbols-outlined text-safety-orange">home_work</span>
+                    </div>
+                    <p class="text-slate-500 font-label-caps text-[10px] mb-4">KK NAGAR, CHENNAI</p>
+                    <p class="font-body-md text-slate-600 mb-6">Boutique apartment project in the heart of the city, blending contemporary aesthetics with urban utility.</p>
+                    <div class="flex items-center gap-4 border-t border-slate-100 pt-4">
+                        <div class="flex-1">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Units</span>
+                            <span class="block font-h3 text-slate-900 text-lg">6 BKH</span>
+                        </div>
+                        <div class="flex-1 border-l border-slate-100 pl-4">
+                            <span class="block text-[10px] text-slate-400 font-bold uppercase">Status</span>
+                            <span class="block font-h3 text-slate-900 text-lg">ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Concepts Section -->
+    <section class="bg-slate-950 py-24 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+                <div class="border-l-4 border-safety-orange pl-6">
+                    <h2 class="font-h2 text-h2 uppercase text-white">3D Concepts</h2>
+                    <p class="text-slate-400 font-body-md">Precision-modeled visualizations for pre-construction validation.</p>
+                </div>
+                <div class="font-label-caps text-label-caps text-slate-500 tracking-[0.2em]">DIGITAL BLUEPRINTING</div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 3D Card 1 -->
+                <div class="group relative aspect-[3/4] bg-slate-900 border border-slate-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="3D wireframe render of geometric pavilion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRUCsTLEdoS5os8ewn2-aG2C46ChKDgXD2OhSGuNduUcMvcxohj-BVBKtAq8ur19GIhabsoy2lvHsDat_3LMVMvnoft7eeAadlz7TvGW7ZgVEQTmbwi-N4rCl24We_R9fp0vFNs0jEilQ255McmOE_98LKb9tMhm3YqJoEy_EEVOFb9pV3lQuiLJV1CCyVMohBlG2hgYP2ISvccFzrqIDmtsGcGZ0HEwL8WGAIXlVqIxuxN8o1aULLcZtEDuhRVaGmyDwDynnpTWM"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span class="block font-label-caps text-[10px] text-safety-orange mb-2">RENDER_TYPE: WIREFRAME_01</span>
+                        <h4 class="font-h3 text-h3 text-white">ORBITAL HUB</h4>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="text-white border border-white/30 px-4 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black">View Specs</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3D Card 2 -->
+                <div class="group relative aspect-[3/4] bg-slate-900 border border-slate-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Photorealistic 3D rendering of glass skyscraper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF_c3BykLxDDgc4e1RoczwYfUlISfjzk2A8-tUfsA2euapCXnTmjIyjIVfxfudsHtb6xFbb3wi-h6YFVeGAHkWXWvEsaFq51v4scI1o4XvHWf9BwZ-FDwE0OgdUStZyQsTA_gsKdhdXsI_ve2H8xwQ6pvX11AWw5uCCUbfr5PvMD6__-an7MHjPY-w8v4rNJCT0cTN-KotzoF4-slOHg1XqnDAfH6xHYIofV89HWc-VZtK9fI9hiB98rc3nAosaA9RT_1HBM38ORo"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span class="block font-label-caps text-[10px] text-safety-orange mb-2">RENDER_TYPE: PHOTO_REAL_V2</span>
+                        <h4 class="font-h3 text-h3 text-white">THE SPIRE R3</h4>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="text-white border border-white/30 px-4 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black">View Specs</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3D Card 3 -->
+                <div class="group relative aspect-[3/4] bg-slate-900 border border-slate-800 overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Sectional 3D cutaway view of office building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxFJmyFV4BKbTnf_cWniE16jfEB07Cvh_xOZGC817ZRkbgp8Tke0wRaejqFANHs0wYV7h0fupcIfaKucHqNXYeSZXQfc9PL1XnNdIS94l3RbXAHWZQixe51QAkhc2lNRhjiGiFIdiyEMhwvIjWCH7vqhtVnXItHCtKqY8T6kycxUtsokJiDsJQdpuzSRuL-R1Yv1qLrJcfCYIsC_tPTk_1_UNgA-7r0IdwdOdzSZy3n7E6fCVA3NDjEqBBTlXjAvWd6kmPddSr9vk"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span class="block font-label-caps text-[10px] text-safety-orange mb-2">RENDER_TYPE: BIM_INTEGRATION</span>
+                        <h4 class="font-h3 text-h3 text-white">SYSTEMS CORE</h4>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="text-white border border-white/30 px-4 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black">View Specs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landmark Projects Section -->
+    <section class="py-24 bg-surface-container overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="mb-16 text-center">
+                <h2 class="font-h1 text-h1 uppercase mb-4">Landmark Projects</h2>
+                <div class="h-1 w-24 bg-safety-orange mx-auto"></div>
+            </div>
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-12 gap-6 h-auto md:h-[800px] md:grid-rows-2">
+                <!-- Main Project -->
+                <div class="col-span-12 md:col-span-8 md:row-span-2 relative group overflow-hidden border border-slate-300 structural-shadow h-64 md:h-auto">
+                    <img class="absolute inset-0 w-full h-full object-cover" alt="Massive modern office complex" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNfRrj7ZKJILWJxUwheitrtJ528KrPSg9YWGVWFM-YVIlqb2xVUafxmbwe_6wlR1olALZ9Pc8k4FleELLXZmuXiBgVSKuVBZHNdW7S8iAltX_L3y7onX3b9lZBEQcrAmdFRl4gn8mR56BQTg1KVmP3CF-PesWfx8Bkelnx3cVwrIITdgT9EYKbS0oyCWc0hfszLMtHy6WoSL8W8JN8XoMNvXRd4l2f1mNYWOd3K3UK3bFC8_mNz5OK6ozj3Lz93WA9CjFmiR1BvdI"/>
+                    <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-colors duration-500"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 bg-white/95 border-t-8 border-safety-orange translate-y-[70%] group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="font-h2 text-lg md:text-h2 mb-4 text-slate-900">RAMANUJAN IT PARK</h3>
+                        <div class="flex gap-8 mb-6">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Area</span>
+                                <span class="block font-h3 text-slate-900">1.2M SQFT</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Status</span>
+                                <span class="block font-h3 text-slate-900">OPERATIONAL</span>
+                            </div>
+                        </div>
+                        <p class="font-body-md text-slate-600 text-sm md:text-base">Complex structural glazing and load-bearing steel skeleton execution for Chennai's premier technology hub.</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-span-12 md:col-span-4 relative group overflow-hidden border border-slate-300 structural-shadow h-64 md:h-auto">
+                    <img class="absolute inset-0 w-full h-full object-cover" alt="Luxury infinity pool" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfMOgnC9t-g2bd9rS3ywD-sVgdIiaQ7VyR8jYZEaLPnDUQrWGkJGfg_Y3NR0Hu19KEWNiIy3fGZmWKfRhAuDQhiCI6Kv6dfvBe9tOW4iaTvAQaUHSpcD74Ad6TDKRmh6aouvs1tWJXBVnv388ahXi2F5OgVO3o62vdsP-QCDQYxnQawIz9U5c4V985n5lZFU5CmIAGTtGVPsELrLtR0Rfe9X_Npj49avRP9L0Z_ni-64N3urwq8PyU4KUW-CVKXUjZH_0mFOkTFoE"/>
+                    <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/10 transition-colors duration-500"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 bg-white/95 border-t-8 border-safety-orange translate-y-[70%] group-hover:translate-y-0 transition-transform duration-500 text-slate-900">
+                        <h3 class="font-h3 text-h3">TAJ HOTEL POOL</h3>
+                        <p class="text-slate-600 font-label-caps text-label-caps mt-2">STRUCTURAL WATERPROOFING & REINFORCEMENT</p>
+                        <div class="flex gap-8 mt-6">
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Project Type</span>
+                                <span class="block font-h3 text-slate-900">WATERPROOFING</span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase">Status</span>
+                                <span class="block font-h3 text-slate-900">COMPLETED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-span-12 md:col-span-4 bg-white border border-slate-300 p-10 flex flex-col justify-center blueprint-grid h-64 md:h-auto">
+                    <span class="material-symbols-outlined text-4xl text-safety-orange mb-6">verified</span>
+                    <h4 class="font-h3 text-h3 text-slate-900 mb-4">TECHNICAL ADVISORY</h4>
+                    <p class="font-body-md text-slate-600 mb-6 text-sm md:text-base">Our landmark projects represent the intersection of architectural vision and rigorous engineering reality.</p>
+                    <a class="flex items-center gap-2 font-bold text-slate-900 hover:text-safety-orange transition-colors text-sm md:text-base" href="#">
+                        DOWNLOAD PORTFOLIO PDF
+                        <span class="material-symbols-outlined">download</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-50 border-t-2 border-slate-200">
+    <div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-8">
+        <div class="flex flex-col gap-2">
+            <a href="index.html" class="text-xl font-black text-slate-900">HI-TECH ENGINEERS</a>
+            <p class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500">© 2024 HI-TECH ENGINEERS. Precision in design, reliability in construction.</p>
+        </div>
+        <div class="flex gap-8">
+            <a class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-safety-orange transition-colors underline decoration-2 underline-offset-4" href="#">LinkedIn</a>
+            <a class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-safety-orange transition-colors underline decoration-2 underline-offset-4" href="#">Instagram</a>
+            <a class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-safety-orange transition-colors underline decoration-2 underline-offset-4" href="#">Terms</a>
+            <a class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-safety-orange transition-colors underline decoration-2 underline-offset-4" href="#">Privacy</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
