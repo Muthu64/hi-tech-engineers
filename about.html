@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About | Hi-Tech Engineers</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#45464d",
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#131b2e",
+                        "on-primary-container": "#7c839b",
+                        "secondary": "#515f74",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#2f1500",
+                        "on-tertiary-container": "#c76c00",
+                        "safety-orange": "#FF8C00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-safety-orange selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="flex justify-between items-center px-8 h-20">
+        <a href="index.html" class="text-2xl font-black tracking-tighter text-slate-900 uppercase">Hi-Tech Engineers</a>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="index.html">Home</a>
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="index.html#services">Services</a>
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="portfolio.html">Portfolio</a>
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-bold text-safety-orange border-b-2 border-safety-orange pb-1" href="about.html">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="md:hidden material-symbols-outlined text-slate-900" onclick="document.getElementById('about-mobile-menu').classList.toggle('hidden')">menu</button>
+            <button class="bg-safety-orange text-white px-6 py-2 font-['Space_Grotesk'] text-sm uppercase tracking-wider font-bold transition-transform active:scale-95" onclick="window.location.href='index.html#contact'">Get Quote</button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="about-mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-8 py-4 space-y-3">
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="index.html" onclick="document.getElementById('about-mobile-menu').classList.add('hidden')">Home</a>
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="index.html#services" onclick="document.getElementById('about-mobile-menu').classList.add('hidden')">Services</a>
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="portfolio.html" onclick="document.getElementById('about-mobile-menu').classList.add('hidden')">Portfolio</a>
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-bold text-safety-orange" href="about.html" onclick="document.getElementById('about-mobile-menu').classList.add('hidden')">About</a>
+    </div>
+</nav>
+
+<main class="pt-20">
+    <!-- Hero / Personal Story Section -->
+    <section class="relative min-h-[819px] flex items-center bg-white blueprint-grid overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 z-10">
+                <span class="inline-block px-3 py-1 bg-primary-container text-white font-label-caps text-label-caps mb-6">SOLE PRINCIPAL EXPERT</span>
+                <h1 class="font-h1 text-h1 text-slate-900 mb-6 uppercase">The Precision <br/><span class="text-safety-orange">of Every Pixel.</span></h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8">I am a solo expert dedicated to the intersection of architectural imagination and structural reality. For over a decade, I've personally transformed complex visions into engineered certainties through advanced 3D modeling, rigorous structural planning, and meticulous project management.</p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-safety-orange text-white px-8 py-4 font-label-caps uppercase tracking-widest text-xs flex items-center gap-2">
+                        Download Portfolio <span class="material-symbols-outlined text-sm">download</span>
+                    </button>
+                    <button class="border border-slate-900 text-slate-900 px-8 py-4 font-label-caps uppercase tracking-widest text-xs">
+                        View Credentials
+                    </button>
+                </div>
+            </div>
+            <div class="md:col-span-5 relative">
+                <div class="aspect-[4/5] bg-slate-200 border-l-[12px] border-b-[12px] border-safety-orange overflow-hidden relative shadow-xl">
+                    <img alt="Portrait of principal expert" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/ADBb0uj1bi5H64BjjLZRBH3ggc6sfVgd391ty6QJkvupmLqkrOQ7l6hk5Hpndlo0C4GEQoMXnZBQF0fiCEV5lEkWjhxpFubBhzUEeCZ2-Wxl709iFHAW3GBXZnCNvlPOB2g3gpv1PVvD2znTDEQbmfN8mWjc3_exkOs2CsilONeehM2G4kynOAbP9tFfssB7Z_R8VK-nHLlCgsaDTNs0Mlp8WAebNo337qHXqw47wI3sem13uyQbjv6eWRAOlAON0hUcXPmBFbG3wWQ0"/>
+                    <div class="absolute bottom-4 left-4 bg-white p-4 border border-slate-200">
+                        <p class="font-label-caps text-[10px] text-slate-500 uppercase mb-1">Expert Resident</p>
+                        <p class="font-h3 text-base text-slate-900">Chennai, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy of Precision -->
+    <section class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h2 class="font-h2 text-h2 text-slate-900 mb-8 uppercase tracking-tighter">My Philosophy <br/>of Precision</h2>
+                    <p class="font-body-md text-body-md text-slate-600 mb-6">
+                        My approach is rooted in the belief that structural integrity is not just a safety requirement, but a form of art. Every line I draw in CAD is a promise of stability; every 3D render is a blueprint for a future reality that I oversee from concept to completion.
+                    </p>
+                    <blockquote class="border-l-4 border-safety-orange pl-6 py-2 italic font-body-lg text-slate-900 mb-8">"Structure is the skeleton of civilization. I design it with the same care as the heart that beats within it."</blockquote>
+                </div>
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="bg-white p-8 border border-slate-200 flex gap-6 items-start">
+                        <div class="w-12 h-12 bg-slate-900 text-white flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined">architecture</span>
+                        </div>
+                        <div>
+                            <h3 class="font-h3 text-h3 mb-2">Individual Accountability</h3>
+                            <p class="text-slate-600">Zero tolerance for error. I provide direct oversight on every measurement and simulation to ensure absolute structural longevity.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 border border-slate-200 flex gap-6 items-start">
+                        <div class="w-12 h-12 bg-slate-900 text-white flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined">layers</span>
+                        </div>
+                        <div>
+                            <h3 class="font-h3 text-h3 mb-2">Integrated Expertise</h3>
+                            <p class="text-slate-600">I personally bridge the gap between high-end 3D aesthetics and the hard physical realities of engineering and material science.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills: Bento Grid -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="mb-16">
+                <p class="font-label-caps text-safety-orange mb-2">SOLO CAPABILITIES</p>
+                <h2 class="font-h2 text-h2 uppercase">My Technical Arsenal</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px]">
+                <!-- Skill 1: 3D Rendering -->
+                <div class="md:col-span-2 md:row-span-2 bg-slate-900 text-white p-10 flex flex-col justify-end relative overflow-hidden group">
+                    <img alt="3D architectural visualization" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfnAQ0N4sIt0fQGqsKuxUMlKSqogTykzhBEnabE05r4MuGJS44jCw20EXfQ6a3fPgNSmMIA_EBS7qBX5JZawyouyBbxmI0L-Ig91NAx3p5twAeWRjQsZcqe171uZFk9-Qp5W8gAsezHWPSlfE8ikYG35z1xsFSq-ksgEvXkNQrp3KelJ0wq7tkTO8vXxRAebcA2bFBxRi643KhaW57Q1gZpcWh3N6jGAjcuzcxj8sZD0gcrR9h97wkiodiKqap19Dj5kxWWSDQ6QU"/>
+                    <div class="relative z-10">
+                        <span class="material-symbols-outlined text-4xl mb-4 text-safety-orange">view_in_ar</span>
+                        <h3 class="font-h2 text-3xl mb-4 uppercase">Advanced 3D Design</h3>
+                        <p class="font-body-md text-slate-300 max-w-sm">I create hyper-realistic visualizations using industry-leading tools to simulate lighting and materials before construction begins.</p>
+                    </div>
+                </div>
+                <!-- Skill 2: Structural Planning -->
+                <div class="md:col-span-1 md:row-span-1 bg-surface-container p-8 border border-slate-200">
+                    <span class="material-symbols-outlined text-slate-900 mb-4">foundation</span>
+                    <h3 class="font-h3 text-xl mb-2 uppercase">Structural Planning</h3>
+                    <p class="text-xs font-label-caps text-slate-500 mb-4">LOAD ANALYSIS / SEISMIC DESIGN</p>
+                    <div class="w-full bg-slate-200 h-1">
+                        <div class="bg-primary-container h-1 w-[95%]"></div>
+                    </div>
+                </div>
+                <!-- Skill 3: CAD -->
+                <div class="md:col-span-1 md:row-span-1 bg-surface-container p-8 border border-slate-200">
+                    <span class="material-symbols-outlined text-slate-900 mb-4">precision_manufacturing</span>
+                    <h3 class="font-h3 text-xl mb-2 uppercase">Precision CAD</h3>
+                    <p class="text-xs font-label-caps text-slate-500 mb-4">REVIT / ARCHICAD MASTERY</p>
+                    <div class="w-full bg-slate-200 h-1">
+                        <div class="bg-primary-container h-1 w-[90%]"></div>
+                    </div>
+                </div>
+                <!-- Skill 4: Project Management -->
+                <div class="md:col-span-2 md:row-span-1 border-2 border-slate-900 p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-h3 text-2xl mb-2 uppercase">Solo Project Management</h3>
+                        <p class="text-slate-600">I handle the end-to-end lifecycle of every project, from initial site feasibility to the final handover inspection.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="px-3 py-1 bg-slate-100 text-[10px] font-bold uppercase tracking-widest text-slate-700">Cost Control</span>
+                        <span class="px-3 py-1 bg-slate-100 text-[10px] font-bold uppercase tracking-widest text-slate-700">Scheduling</span>
+                        <span class="px-3 py-1 bg-slate-100 text-[10px] font-bold uppercase tracking-widest text-slate-700">Compliance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specification Section -->
+    <section class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-4">
+                    <h2 class="font-h2 text-3xl uppercase text-safety-orange mb-6">Expert <br/>Proficiencies</h2>
+                    <p class="text-slate-400 font-body-md mb-8">
+                        I leverage industry-leading software and adhere to strict global standards to deliver high-performance, single-point-of-contact builds.
+                    </p>
+                </div>
+                <div class="md:col-span-8">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-700">
+                                <th class="text-left py-4 font-label-caps tracking-widest text-slate-500">CATEGORY</th>
+                                <th class="text-left py-4 font-label-caps tracking-widest text-slate-500">EXPERTISE LEVEL</th>
+                                <th class="text-right py-4 font-label-caps tracking-widest text-slate-500">PRIMARY TOOLS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-6 font-bold uppercase text-sm">3D Visualization</td>
+                                <td class="py-6 font-mono text-safety-orange uppercase text-xs tracking-widest">Master</td>
+                                <td class="py-6 text-right text-slate-300">Lumion, 3ds Max, V-Ray</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-6 font-bold uppercase text-sm">Structural Eng.</td>
+                                <td class="py-6 font-mono text-safety-orange uppercase text-xs tracking-widest">Advanced</td>
+                                <td class="py-6 text-right text-slate-300">SAP2000, Tekla, ETABS</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-6 font-bold uppercase text-sm">Project Lifecycle</td>
+                                <td class="py-6 font-mono text-safety-orange uppercase text-xs tracking-widest">Expert</td>
+                                <td class="py-6 text-right text-slate-300">BIM Level 2, ISO 19650</td>
+                            </tr>
+                            <tr class="border-b border-slate-800 hover:bg-slate-800/50 transition-colors">
+                                <td class="py-6 font-bold uppercase text-sm">Design & CAD</td>
+                                <td class="py-6 font-mono text-safety-orange uppercase text-xs tracking-widest">Specialist</td>
+                                <td class="py-6 text-right text-slate-300">AutoCAD, Revit, Photoshop</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-white text-center border-b border-slate-200">
+        <div class="max-w-3xl mx-auto px-8">
+            <h2 class="font-h1 text-4xl mb-8 uppercase tracking-tighter">Ready to Build Your <span class="text-safety-orange underline decoration-4 underline-offset-8">Blueprint?</span></h2>
+            <p class="font-body-lg text-slate-600 mb-12">
+                Whether you are in the concept phase or ready for structural development, I provide the specialized technical leadership needed to ensure your project's success.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <button class="bg-slate-900 text-white px-10 py-5 font-label-caps uppercase tracking-widest text-sm flex items-center justify-center gap-3" onclick="window.location.href='index.html#contact'">
+                    Schedule Consultation <span class="material-symbols-outlined">calendar_today</span>
+                </button>
+                <a href="portfolio.html" class="border-2 border-slate-900 text-slate-900 px-10 py-5 font-label-caps uppercase tracking-widest text-sm inline-block">
+                    Request Case Studies
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-50 border-t-2 border-slate-200">
+    <div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-8">
+        <div class="flex flex-col items-center md:items-start gap-4">
+            <a href="index.html" class="text-xl font-black text-slate-900 uppercase">Hi-Tech Engineers</a>
+            <p class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500">© 2024 Hi-Tech Engineers. Expert Solo Precision in Design & Construction.</p>
+        </div>
+        <div class="flex gap-8">
+            <a class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-safety-orange underline decoration-2 underline-offset-4 transition-colors" href="#">LinkedIn</a>
+            <a class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-safety-orange underline decoration-2 underline-offset-4 transition-colors" href="#">Instagram</a>
+            <a class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-safety-orange underline decoration-2 underline-offset-4 transition-colors" href="#">Terms</a>
+            <a class="font-['Space_Grotesk'] text-xs font-medium uppercase tracking-widest text-slate-500 hover:text-safety-orange underline decoration-2 underline-offset-4 transition-colors" href="#">Privacy</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
