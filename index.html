@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hi-Tech Engineers | Precision Structural Engineering</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#45464d",
+                        "primary": "#000000",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#131b2e",
+                        "on-primary-container": "#7c839b",
+                        "secondary": "#515f74",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#2f1500",
+                        "on-tertiary-container": "#c76c00",
+                        "safety-orange": "#FF8C00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .structural-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.1);
+        }
+        .blueprint-pattern {
+            background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto w-full">
+        <a href="index.html" class="text-2xl font-black tracking-tighter text-slate-900">HI-TECH ENGINEERS</a>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-bold text-safety-orange border-b-2 border-safety-orange pb-1" href="index.html">Home</a>
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="#services">Services</a>
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="portfolio.html">Portfolio</a>
+            <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="about.html">About</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="md:hidden material-symbols-outlined text-slate-900" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">menu</button>
+            <button class="bg-safety-orange text-white px-6 py-2.5 font-['Space_Grotesk'] font-bold text-sm tracking-wide active:scale-[0.98] transition-transform" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                Get Quote
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-8 py-4 space-y-3">
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-bold text-safety-orange" href="index.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="portfolio.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Portfolio</a>
+        <a class="block font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="about.html" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+    </div>
+</nav>
+
+<main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative h-[700px] flex items-center overflow-hidden bg-primary-container">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img alt="Modern residential building under construction" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj7zD4w85KnSzLp11QfFA7d78a9116uL5B1_5BKF5QhG3Gs1jyoWrFCi1N9PxkCayCBGcNz5YvuqQpBk6GLViUjH-SV0u6F4latsFuheN7r6wV3h503SJZ0U_rCP0K-uWfJKoHGxDDMlw-mImteGaMlB4gSy-EqogLv8J5Md2K0JqaMMhgxfoZuZ4AyAazxoQwRg8mQPQlTrqLS00cu3BDSbNzyrMJiH_yMbFrIcKFsrp2JLJHrX48QEISe_0lamS60d4WdUDU9Pg"/>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+            <div class="max-w-3xl border-l-4 border-safety-orange pl-8 bg-black/40 backdrop-blur-sm py-12">
+                <h1 class="font-h1 text-h1 text-white mb-6">Precision Engineering for Modern Living</h1>
+                <p class="font-body-lg text-body-lg text-slate-100 mb-8 max-w-xl">
+                    Specialized structural mastery for residential projects. Expert 3D design, rigorous structural planning, and meticulous project oversight.
+                </p>
+                <div class="flex gap-4">
+                    <button class="bg-safety-orange text-white px-8 py-4 font-['Space_Grotesk'] font-bold text-lg active:scale-95 transition-all structural-shadow" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Start Your Project
+                    </button>
+                    <a href="portfolio.html" class="inline-block border-2 border-white text-white px-8 py-4 font-['Space_Grotesk'] font-bold text-lg hover:bg-white hover:text-primary transition-all">
+                        View Portfolio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white blueprint-pattern">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="mb-16">
+                <span class="font-label-caps text-label-caps text-safety-orange uppercase tracking-[0.2em]">Expert Services</span>
+                <h2 class="font-h2 text-h2 mt-2">Specialized Solutions</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-5">
+                <!-- Service 1 -->
+                <div class="bg-surface-container-low p-8 border border-slate-200 structural-shadow hover:border-safety-orange transition-colors group">
+                    <div class="w-14 h-14 bg-primary-container flex items-center justify-center mb-6 text-white">
+                        <span class="material-symbols-outlined text-3xl">home</span>
+                    </div>
+                    <h3 class="font-h3 text-h3 mb-4">Villa Design</h3>
+                    <p class="font-body-md text-body-md text-slate-600">
+                        Custom structural design for luxury villas with architectural elegance and stability.
+                    </p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-surface-container-low p-8 border border-slate-200 structural-shadow hover:border-safety-orange transition-colors group">
+                    <div class="w-14 h-14 bg-primary-container flex items-center justify-center mb-6 text-white">
+                        <span class="material-symbols-outlined text-3xl">view_in_ar</span>
+                    </div>
+                    <h3 class="font-h3 text-h3 mb-4">3D Modeling</h3>
+                    <p class="font-body-md text-body-md text-slate-600">
+                        Advanced 3D structural modeling for accurate planning and flawless execution.
+                    </p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-surface-container-low p-8 border border-slate-200 structural-shadow hover:border-safety-orange transition-colors group">
+                    <div class="w-14 h-14 bg-primary-container flex items-center justify-center mb-6 text-white">
+                        <span class="material-symbols-outlined text-3xl">apartment</span>
+                    </div>
+                    <h3 class="font-h3 text-h3 mb-4">Apartments</h3>
+                    <p class="font-body-md text-body-md text-slate-600">
+                        Comprehensive engineering for residential complexes with focus on safety.
+                    </p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-surface-container-low p-8 border border-slate-200 structural-shadow hover:border-safety-orange transition-colors group">
+                    <div class="w-14 h-14 bg-primary-container flex items-center justify-center mb-6 text-white">
+                        <span class="material-symbols-outlined text-3xl">rebase_edit</span>
+                    </div>
+                    <h3 class="font-h3 text-h3 mb-4">Revamping</h3>
+                    <p class="font-body-md text-body-md text-slate-600">
+                        Expert structural revamping and renovation for modernizing existing structures.
+                    </p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-surface-container-low p-8 border border-slate-200 structural-shadow hover:border-safety-orange transition-colors group">
+                    <div class="w-14 h-14 bg-primary-container flex items-center justify-center mb-6 text-white">
+                        <span class="material-symbols-outlined text-3xl">architecture</span>
+                    </div>
+                    <h3 class="font-h3 text-h3 mb-4">Construction</h3>
+                    <p class="font-body-md text-body-md text-slate-600">
+                        Technical oversight ensuring every detail follows precision blueprints.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="py-24 bg-slate-950 text-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div>
+                    <span class="font-label-caps text-label-caps text-safety-orange uppercase tracking-[0.2em]">Landmark Developments</span>
+                    <h2 class="font-h2 text-h2 mt-2">Featured Projects</h2>
+                </div>
+                <a class="font-['Space_Grotesk'] font-bold border-b-2 border-safety-orange pb-1 hover:text-safety-orange transition-colors" href="portfolio.html">View Full Portfolio</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[800px]">
+                <!-- Main Project -->
+                <div class="md:col-span-8 relative overflow-hidden group border border-white/10">
+                    <div class="absolute inset-0 bg-slate-900 flex items-center justify-center text-slate-500 overflow-hidden">
+                        <img alt="Modern residential complex" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" src="https://lh3.googleusercontent.com/aida/ADBb0uj7zD4w85KnSzLp11QfFA7d78a9116uL5B1_5BKF5QhG3Gs1jyoWrFCi1N9PxkCayCBGcNz5YvuqQpBk6GLViUjH-SV0u6F4latsFuheN7r6wV3h503SJZ0U_rCP0K-uWfJKoHGxDDMlw-mImteGaMlB4gSy-EqogLv8J5Md2K0JqaMMhgxfoZuZ4AyAazxoQwRg8mQPQlTrqLS00cu3BDSbNzyrMJiH_yMbFrIcKFsrp2JLJHrX48QEISe_0lamS60d4WdUDU9Pg"/>
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/90 to-transparent">
+                        <span class="font-label-caps text-white/70">STRUCTURAL DESIGN</span>
+                        <h4 class="font-h3 text-h3">Modern Residential Complex</h4>
+                        <p class="text-sm text-safety-orange">Complete Structural Engineering & 3D Design</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="md:col-span-4 relative overflow-hidden group border border-white/10">
+                    <img alt="Villa project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ugXdGbvA9l59wZnn7q5CsFF8xzUOPB9Pl-yIcZN6CrheiNbcXCVI_UlZ4b43ulKboorwWHQ37684LvDweN9_VFhTJIQRGC-ggvcex83455n_ug0lnWeONrja5xEhUlOiM1pseFTSWavqoKhoqn4_D5oukMjGqun52KUwALQLrp-tNU5rjD_RiBqpO8Bcy3-2MrBmbEGDNzVmX9F37lwhLqRbxSoX046JehdRWvQVmNsfZjVk5eAalulVqariXCXg-lgMXnHS7GOXQ"/>
+                    <div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/90 to-transparent">
+                        <span class="font-label-caps text-white/70">3D DESIGN</span>
+                        <h4 class="font-h3 text-h3">Luxury Villa</h4>
+                        <p class="text-sm text-slate-400">Contemporary Design & Execution</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="md:col-span-4 relative overflow-hidden group border border-white/10">
+                    <img alt="Apartment building" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uhGdif4YspLZbOu5Btx4G_Q7dlkB823K627PHjzgXc_oHLFR5oE0caN_C5-YVxphaZvYCAWtmhfeERWSdbkP5_j9089IgyTusf2xbLueDJoy6aeSYz7so8Tgxg4SKbOF0R_1Na-GgzcyMFF6GY3_-pXaj7o9NrTn9rkaVS15I9sAP8UWCtFlhsZHAt_HjZKq2X_LCZ9Z66gMkB6-ncvooe1cV64lD3oGyZYpFkqDaF8PLd1jT1YfBNitWLNaedDsMNiDgGZ5YDDsQ"/>
+                    <div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/90 to-transparent">
+                        <span class="font-label-caps text-white/70">REVAMPING</span>
+                        <h4 class="font-h3 text-h3">Residential Revamp</h4>
+                        <p class="text-sm text-slate-400">Structural Upgrade & Modernization</p>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="md:col-span-4 relative overflow-hidden group border border-white/10">
+                    <img alt="Commercial building" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg18PG2cdkWWeidLWmb6xb8Ln_cb8lpHu3zS5Ro_7FUKgk8jBhoJgCKYmfffNX_2Ak5w4tbQ6avVw8YPydFNamvOFwBoAGVIT5zRdq9XihorVeP5BAEv9b-NyV1W4HbvZCW3_H3bHFeXHWORbUYoGvDGAAcOP_evLF9gz4EwA01DjbhFqGcCNWRqbylx9_hQND11xs6Vij04-Z0qWCa76D33RNvuCwuox7kswrxg0u_DCuTBAyp3Hn6m8IHpsc5da5bwcQ-GZ5PxY"/>
+                    <div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/90 to-transparent">
+                        <span class="font-label-caps text-white/70">WATERPROOFING</span>
+                        <h4 class="font-h3 text-h3">Taj Hotel Project</h4>
+                        <p class="text-sm text-slate-400">Structural Waterproofing Specialist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-20">
+                <span class="font-label-caps text-label-caps text-safety-orange uppercase tracking-[0.2em]">Our Workflow</span>
+                <h2 class="font-h2 text-h2 mt-2">Expert Process</h2>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">A systematic approach to structural excellence, from concept to completion.</p>
+            </div>
+            <div class="relative">
+                <div class="absolute top-1/2 left-0 w-full h-1 bg-slate-200 -translate-y-1/2 hidden md:block"></div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+                    <div class="bg-white p-8 border border-slate-200 structural-shadow text-center">
+                        <div class="w-16 h-16 bg-safety-orange text-white flex items-center justify-center font-h3 mx-auto -mt-16 mb-6 structural-shadow">01</div>
+                        <h4 class="font-h3 text-h3 mb-2">3D Modeling</h4>
+                        <p class="text-slate-500 text-sm">Visualizing the structural skeleton before construction.</p>
+                    </div>
+                    <div class="bg-white p-8 border border-slate-200 structural-shadow text-center">
+                        <div class="w-16 h-16 bg-safety-orange text-white flex items-center justify-center font-h3 mx-auto -mt-16 mb-6 structural-shadow">02</div>
+                        <h4 class="font-h3 text-h3 mb-2">Technical Analysis</h4>
+                        <p class="text-slate-500 text-sm">Precise engineering calculations for safety and durability.</p>
+                    </div>
+                    <div class="bg-white p-8 border border-slate-200 structural-shadow text-center">
+                        <div class="w-16 h-16 bg-safety-orange text-white flex items-center justify-center font-h3 mx-auto -mt-16 mb-6 structural-shadow">03</div>
+                        <h4 class="font-h3 text-h3 mb-2">Direct Supervision</h4>
+                        <p class="text-slate-500 text-sm">On-site oversight ensuring design matches construction.</p>
+                    </div>
+                    <div class="bg-white p-8 border border-slate-200 structural-shadow text-center">
+                        <div class="w-16 h-16 bg-safety-orange text-white flex items-center justify-center font-h3 mx-auto -mt-16 mb-6 structural-shadow">04</div>
+                        <h4 class="font-h3 text-h3 mb-2">Certification</h4>
+                        <p class="text-slate-500 text-sm">Independent sign-off on structural integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="font-label-caps text-label-caps text-safety-orange uppercase tracking-[0.2em]">Endorsements</span>
+                    <h2 class="font-h2 text-h2 mt-2">Trusted Expertise</h2>
+                    <p class="font-body-lg text-body-lg text-slate-600 mt-6 mb-8">
+                        Homeowners and builders trust our solo-specialist approach for absolute technical accountability.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-slate-50 p-8 border-l-4 border-safety-orange">
+                        <p class="italic text-lg text-slate-800 mb-4">"Exceptional technical depth and direct access to the lead engineer. Our villa's structural integrity is perfect."</p>
+                        <p class="font-bold">— Client Testimonial</p>
+                    </div>
+                    <div class="bg-slate-50 p-8 border-l-4 border-slate-300">
+                        <p class="italic text-lg text-slate-800 mb-4">"Precision in structural waterproofing was unmatched. An absolute expert in modern codes."</p>
+                        <p class="font-bold">— Project Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="py-24 bg-primary-container relative overflow-hidden">
+        <div class="absolute right-0 top-0 h-full w-1/3 bg-white/5 skew-x-12"></div>
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="font-h1 text-h1 text-white mb-6">Expert Residential Engineering</h2>
+                    <p class="text-slate-400 text-lg mb-8">
+                        Direct technical communication. No middle-men, just expert structural engineering for your project.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-white">
+                            <span class="material-symbols-outlined text-safety-orange">check_circle</span>
+                            Precision 3D Design & Modeling
+                        </li>
+                        <li class="flex items-center gap-3 text-white">
+                            <span class="material-symbols-outlined text-safety-orange">check_circle</span>
+                            Structural Revamping Specialists
+                        </li>
+                        <li class="flex items-center gap-3 text-white">
+                            <span class="material-symbols-outlined text-safety-orange">check_circle</span>
+                            Direct Site Supervision & Support
+                        </li>
+                    </ul>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-safety-orange text-2xl">phone</span>
+                        <div>
+                            <p class="text-slate-400 text-sm">Call us</p>
+                            <a href="tel:+919840882500" class="text-white text-lg font-bold hover:text-safety-orange transition-colors">+91 9840882500</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 structural-shadow">
+                    <form class="space-y-6" action="https://formspree.io/f/mzdopzdk" method="POST">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block font-label-caps mb-2 text-slate-500">Name</label>
+                                <input class="w-full border border-slate-200 focus:border-primary focus:ring-0 p-3 text-sm" placeholder="Your Name" type="text" name="name" required/>
+                            </div>
+                            <div>
+                                <label class="block font-label-caps mb-2 text-slate-500">Email</label>
+                                <input class="w-full border border-slate-200 focus:border-primary focus:ring-0 p-3 text-sm" placeholder="your@email.com" type="email" name="email" required/>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-label-caps mb-2 text-slate-500">Phone Number</label>
+                            <div class="flex gap-2">
+                                <select class="w-24 border border-slate-200 focus:border-primary focus:ring-0 p-3 text-sm" name="country_code">
+                                    <option value="+91" selected>+91 (India)</option>
+                                    <option value="+1">+1 (USA)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+61">+61 (Australia)</option>
+                                    <option value="+65">+65 (Singapore)</option>
+                                </select>
+                                <input class="flex-1 border border-slate-200 focus:border-primary focus:ring-0 p-3 text-sm" placeholder="9840882500" type="tel" name="phone" required/>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block font-label-caps mb-2 text-slate-500">Project Type</label>
+                            <select class="w-full border border-slate-200 focus:border-primary focus:ring-0 p-3 text-sm" name="project_type" required>
+                                <option value="">Select a project type</option>
+                                <option value="New Villa Construction">New Villa Construction</option>
+                                <option value="Apartment Structural Design">Apartment Structural Design</option>
+                                <option value="Residential Revamp">Residential Revamp</option>
+                                <option value="Waterproofing Consultation">Waterproofing Consultation</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-label-caps mb-2 text-slate-500">Message</label>
+                            <textarea class="w-full border border-slate-200 focus:border-primary focus:ring-0 p-3 text-sm" placeholder="Describe your project..." rows="4" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-safety-orange text-white py-4 font-['Space_Grotesk'] font-bold text-lg active:scale-[0.99] transition-transform hover:bg-orange-600">
+                            Request Consultation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-12 max-w-7xl mx-auto">
+        <div class="space-y-6">
+            <span class="text-xl font-bold text-slate-900">HI-TECH ENGINEERS</span>
+            <p class="font-['Space_Grotesk'] text-sm tracking-wide text-slate-500 max-w-sm">
+                © 2024 HI-TECH ENGINEERS. Specialized Structural Consultancy & Design.
+            </p>
+            <div class="flex gap-6">
+                <span class="material-symbols-outlined text-slate-400 hover:text-safety-orange cursor-pointer transition-colors">hub</span>
+                <span class="material-symbols-outlined text-slate-400 hover:text-safety-orange cursor-pointer transition-colors">public</span>
+                <span class="material-symbols-outlined text-slate-400 hover:text-safety-orange cursor-pointer transition-colors">business</span>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 gap-8">
+            <div>
+                <h5 class="font-label-caps text-slate-900 mb-6">Services</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-['Space_Grotesk'] text-sm text-slate-500 hover:text-safety-orange transition-colors" href="#services">Our Services</a></li>
+                    <li><a class="font-['Space_Grotesk'] text-sm text-slate-500 hover:text-safety-orange transition-colors" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="font-['Space_Grotesk'] text-sm text-slate-500 hover:text-safety-orange transition-colors" href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-label-caps text-slate-900 mb-6">Legal</h5>
+                <ul class="space-y-4">
+                    <li><a class="font-['Space_Grotesk'] text-sm text-slate-500 hover:text-safety-orange transition-colors" href="#">Privacy Policy</a></li>
+                    <li><a class="font-['Space_Grotesk'] text-sm text-slate-500 hover:text-safety-orange transition-colors" href="#">Terms</a></li>
+                    <li><a class="font-['Space_Grotesk'] text-sm text-slate-500 hover:text-safety-orange transition-colors" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    // Highlight Services tab when scrolling to services section
+    window.addEventListener('scroll', function() {
+        const servicesSection = document.getElementById('services');
+        if (servicesSection) {
+            const rect = servicesSection.getBoundingClientRect();
+            const servicesLink = document.querySelector('a[href="#services"]');
+            
+            if (rect.top <= 100 && rect.bottom >= 100) {
+                // Services section is in view
+                if (servicesLink) {
+                    servicesLink.classList.add('text-safety-orange', 'border-b-2', 'border-safety-orange', 'font-bold', 'pb-1');
+                    servicesLink.classList.remove('text-slate-600', 'font-medium');
+                }
+                // Remove highlight from other tabs
+                document.querySelectorAll('a[href="index.html"], a[href="portfolio.html"], a[href="about.html"]').forEach(link => {
+                    if (link.textContent.trim() !== 'Contact') {
+                        link.classList.remove('text-safety-orange', 'border-b-2', 'border-safety-orange', 'font-bold', 'pb-1');
+                        link.classList.add('text-slate-600', 'font-medium');
+                    }
+                });
+            } else {
+                // Services section is not in view, restore Home highlight
+                if (servicesLink) {
+                    servicesLink.classList.remove('text-safety-orange', 'border-b-2', 'border-safety-orange', 'font-bold', 'pb-1');
+                    servicesLink.classList.add('text-slate-600', 'font-medium');
+                }
+                const homeLink = document.querySelector('a[href="index.html"]');
+                if (homeLink && homeLink.textContent.trim() === 'Home') {
+                    homeLink.classList.add('text-safety-orange', 'border-b-2', 'border-safety-orange', 'font-bold', 'pb-1');
+                    homeLink.classList.remove('text-slate-600', 'font-medium');
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
