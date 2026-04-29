@@ -78,10 +78,10 @@
 <body class="bg-surface font-body-md text-on-surface selection:bg-safety-orange selection:text-white overflow-x-hidden">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-    <div class="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto w-full">
-        <a href="index.html" class="flex items-center gap-3 min-w-fit">
-            <img src="logo.png" alt="Hi-Tech Engineers Logo" class="h-12 w-12 object-contain"/>
-            <span class="avenir-next-bold-italic font-bold text-slate-900" style="font-size: 1.5rem;">Hi-Tech Engineers</span>
+    <div class="flex justify-between items-center px-4 md:px-8 h-20 w-full">
+        <a href="index.html" class="flex items-center gap-2 min-w-fit">
+            <img src="logo.png" alt="Hi-Tech Engineers Logo" class="h-10 w-10 md:h-12 md:w-12 object-contain"/>
+            <span class="avenir-next-bold-italic font-bold text-slate-900" style="font-size: clamp(0.875rem, 2vw, 1.5rem);">Hi-Tech Engineers</span>
         </a>
         <div class="hidden md:flex items-center gap-8">
             <a class="font-['Space_Grotesk'] text-sm uppercase tracking-wider font-medium text-slate-600 hover:text-safety-orange transition-all" href="index.html">Home</a>
@@ -91,7 +91,7 @@
         </div>
         <div class="flex items-center gap-2 md:gap-4">
             <button class="md:hidden material-symbols-outlined text-slate-900" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">menu</button>
-            <button class="bg-safety-orange text-white px-4 md:px-6 py-2 font-['Space_Grotesk'] font-bold text-xs md:text-sm uppercase tracking-wider transition-transform active:scale-95" onclick="window.location.href='index.html#contact'">Get Quote</button>
+            <button class="bg-safety-orange text-white px-3 md:px-6 py-2 font-['Space_Grotesk'] font-bold text-[10px] md:text-sm uppercase tracking-wider transition-transform active:scale-95 whitespace-nowrap" onclick="window.location.href='index.html#contact'">Get Quote</button>
         </div>
     </div>
     <!-- Mobile Menu -->
